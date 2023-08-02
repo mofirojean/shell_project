@@ -32,25 +32,25 @@ do
     fi
 
     # Move the file to the destination directory
-    case "$file" in 
-        *."${LIST_DOCS}")
+    case "${file##*.}" in 
+        "${LIST_DOCS[@]}")
             echo "Moving $file to documents/"
             mv $file "$CURR_DIR/documents/"
             ;;
-        *."${LIST_IMAGES}")
-            echo "Moving $file to documents/"
+        "${LIST_IMAGES[@]}")
+            echo "Moving $file to images/"
             mv $file "$CURR_DIR/images/"
             ;;
-        *."${LIST_VIDEOS}")
-            echo "Moving $file to documents/"
+        "${LIST_VIDEOS[@]}")
+            echo "Moving $file to videos/"
             mv $file "$CURR_DIR/videos/"
             ;;
-        *."${LIST_AUDIOS}")
-            echo "Moving $file to documents/"
+        "${LIST_AUDIOS[@]}")
+            echo "Moving $file to audios/"
             mv $file "$CURR_DIR/audios/"
             ;;
         *)
-            echo "Moving $file to documents/"
+            echo "Moving $file to others/"
             mv "$file" "$CURR_DIR/others"
             ;;
     esac
