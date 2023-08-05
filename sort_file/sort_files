@@ -1,7 +1,8 @@
 #!/bin/bash
 
 # Get the path of the current directory
-CURR_DIR="$(cd "$(dirname "$0")" && pwd)";
+# CURR_DIR="$(cd "$(dirname "$0")" && pwd)";
+CURR_DIR="$(pwd)"
 # SCRIPT_NAME="$(basename "${BASE_SOURCE[0]}")"
 SCRIPT_NAME="$(basename "$0")"
 
