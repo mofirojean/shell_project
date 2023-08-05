@@ -2,6 +2,15 @@
 
 # Create sample files for testing the sorting script
 
+# Get the path of the current directory
+NEW_FOLDER="$1"
+
+# Create new folder if it doesn't exist
+mkdir -p "$NEW_FOLDER"
+
+# Change to the new folder
+cd "$NEW_FOLDER"
+
 # Create documents
 echo "This is a sample document." > sample_doc1.doc
 echo "Another document for testing." > sample_doc2.docx
